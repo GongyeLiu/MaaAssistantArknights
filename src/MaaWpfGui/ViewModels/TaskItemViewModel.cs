@@ -18,7 +18,6 @@ using MaaWpfGui.Configuration.Factory;
 using MaaWpfGui.Constants.Enums;
 using MaaWpfGui.Helper;
 using MaaWpfGui.Models;
-using MaaWpfGui.ViewModels.UserControl.TaskQueue;
 using Stylet;
 
 namespace MaaWpfGui.ViewModels;
@@ -56,7 +55,6 @@ public class TaskItemViewModel : PropertyChangedBase, IDisposable
 
             ConfigFactory.CurrentConfig.TaskQueue[Index].IsEnable = value;
             StatusDisplay = TaskItemStatus.Idle;
-            FightSettingsUserControlModel.Instance.RefreshSpecifiedDropsDependenciesForCurrentTask(Index);
         }
     }
 
