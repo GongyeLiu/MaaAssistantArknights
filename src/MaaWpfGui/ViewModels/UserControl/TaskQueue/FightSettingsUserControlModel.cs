@@ -64,7 +64,7 @@ public class FightSettingsUserControlModel : TaskSettingsViewModel, FightSetting
     {
         _runningState = RunningState.Instance;
         _runningState.StateChanged += OnRunningStateChanged;
-        Instances.AsstProxy.OnTaskItemStatusChanged += OnTaskStatusChanged;
+        Instances.AsstProxy.OnTaskStatusChanged += OnTaskStatusChanged;
 
         if (Instances.ToolboxViewModel is { } toolboxViewModel)
         {
