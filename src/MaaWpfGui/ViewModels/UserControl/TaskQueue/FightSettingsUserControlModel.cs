@@ -150,6 +150,11 @@ public class FightSettingsUserControlModel : TaskSettingsViewModel, FightSetting
     /// </summary>
     private void OnDepotResultCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
     {
+        if (!_runningState.Idle)
+        {
+            return;
+        }
+
         Execute.OnUIThread(NotifySpecifiedDropsStateChanged);
     }
 
